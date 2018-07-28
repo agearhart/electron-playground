@@ -1,0 +1,5 @@
+node_modules/**
+dist/**
+__tests__/**
+TEST-jest_junit.xml
+npm-debug.log
