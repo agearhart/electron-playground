@@ -6,7 +6,7 @@
             "request": "launch",
             "name": "Electron: Main",
             "protocol": "inspector",
-            "preLaunchTask": "development",
+            "preLaunchTask": "debug",
             "sourceMaps": true,
             "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron",
             "runtimeArgs": [

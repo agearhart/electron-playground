@@ -4,9 +4,9 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "development",
+      "label": "debug",
       "type": "npm",
-      "script": "development",
+      "script": "debug",
       "problemMatcher": [],
     }
   ]

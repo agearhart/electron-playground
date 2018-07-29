@@ -9,6 +9,7 @@ let mainConfig = {
         filename: 'main.bundle.js',
         path: __dirname + '/dist',
     },
+    devtool: "source-map",
     node: {
         __dirname: false,
         __filename: false,
@@ -52,6 +53,7 @@ let rendererConfig = {
         filename: 'renderer.bundle.js',
         path: __dirname + '/dist',
     },
+    devtool: "source-map",
     node: {
         __dirname: false,
         __filename: false,
