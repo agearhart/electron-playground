@@ -2,28 +2,11 @@
   "name": "electron-playground",
   "version": "1.0.0",
   "description": "Learning Electron with React and TypeScript",
-  "main": "index.js",
+  "main": "./dist/main.bundle.js",
   "scripts": {
-    "dev": "webpack --mode development --env.dist=false --config webpack.config.js",
-    "dev:dist": "webpack --mode development --config webpack.config.js",
-    "build": "webpack --mode production --config webpack.config.js",
-    "prestart": "npm run build",
-    "start": "electron ./dist/main.js",
-    "pretest": "webpack --mode development --config webpack.tests.config.js",
-    "test": "jest"
-  },
-  "jest": {
-    "testRegex": "/__tests__/.*\\.jsx?",
-    "reporters": [ "default", "jest-junit" ],
-    "verbose": true,
-    "testURL": "http://localhost/"
-  },
-  "jest-junit": {
-    "suiteName": "jest tests",
-    "output": "./TEST-jest_junit.xml",
-    "classNameTemplate": "{classname}-{title}",
-    "titleTemplate": "{classname}-{title}",
-    "usePathForSuiteName": "true"
+    "start": "electron ./dist/main.bundle.js",
+    "development": "rimraf dist && webpack --watch --config ./webpack.dev.js --progress --colors",
+    "production": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors"
   },
   "repository": {
     "type": "git",
@@ -42,23 +25,15 @@
   },
   "homepage": "https://github.com/agearhart/electron-playground#readme",
   "devDependencies": {
-    "@types/jest": "^23.3.1",
-    "@types/react": "^16.4.7",
-    "@types/react-dom": "^16.0.6",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-preset-es2015-node": "^6.1.1",
-    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
     "electron": "^2.0.5",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
-    "jest": "^23.4.2",
-    "jest-junit": "^5.1.0",
-    "standard": "^11.0.1",
-    "standard-loader": "^6.0.1",
+    "node-sass": "^4.9.2",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
     "ts-loader": "^4.4.2",
-    "tslint": "^5.11.0",
-    "tslint-config-standard": "^7.1.0",
-    "tslint-loader": "^3.6.0",
     "typescript": "^2.9.2",
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0"
