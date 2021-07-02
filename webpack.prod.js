@@ -73,8 +73,8 @@ let rendererConfig = {
                 test: /\.(scss|css)$/,
                 use: [
                     'style-loader',
-                    'css-loader?sourceMap',
-                    'sass-loader?sourceMap',
+                    'css-loader',
+                    'sass-loader',
                 ],
             },
             {
